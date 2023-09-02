@@ -22,6 +22,11 @@
         configurePhase = ''
           ./configure --with-mpi
         '';
+
+        installPhase = ''
+          mkdir -p $out/bin
+          cp src/mb $out/bin
+        '';
       };
 
       packages.x86_64-linux.default = self.packages.x86_64-linux.mrbayes;
