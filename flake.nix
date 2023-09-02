@@ -1,5 +1,5 @@
 {
-  description = "MrBayes with MPI and BEAGLE";
+  description = "MrBayes with MPI support";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs?ref=nixpkgs-unstable";
