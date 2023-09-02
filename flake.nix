@@ -16,9 +16,17 @@
         version = "3.2.7";
 
         src = ./.;
+
+        buildInputs = [ pkgs.mpi ];
+
+        configurePhase = ''
+          ./configure --with-mpi
+        '';
       };
 
       packages.x86_64-linux.default = self.packages.x86_64-linux.mrbayes;
 
     };
 }
+
+
